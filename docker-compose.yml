@@ -5,9 +5,9 @@ services:
     restart: unless-stopped
     environment:
       DATABASE_URL: ${DATABASE_URL:-postgresql://todo_user:todo_password@db:5432/tasks_db}
-      PORT: ${PORT:-3000}
+      PORT: 3000
     ports:
-      - "${PORT:-3000}:3000"
+      - "${HOST_PORT:-3000}:3000"
     depends_on:
       db:
         condition: service_healthy
@@ -20,8 +20,6 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-todo_user}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-todo_password}
       POSTGRES_DB: ${POSTGRES_DB:-tasks_db}
-    ports:
-      - "5432:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     healthcheck:

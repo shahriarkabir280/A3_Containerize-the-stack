@@ -28,10 +28,18 @@ docker compose up --build
 
 Then open:
 
-- API info: http://localhost:3000/
-- Health check: http://localhost:3000/health
-- Tasks: http://localhost:3000/tasks
-- Swagger UI: http://localhost:3000/docs
+- API info: http://localhost:3008/
+- Health check: http://localhost:3008/health
+- Tasks: http://localhost:3008/tasks
+- Swagger UI: http://localhost:3008/docs
+
+If port `3008` is already being used on your computer, change `HOST_PORT` in `.env`, for example:
+
+```env
+HOST_PORT=3009
+```
+
+Then open `http://localhost:3009/tasks` instead.
 
 The API waits for Postgres to pass its health check before starting. On first startup, the app creates the `tasks` table and seeds three sample tasks if the table is empty.
 

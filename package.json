@@ -1,0 +1,28 @@
+{
+  "name": "todo-postgres-containerized",
+  "version": "1.0.0",
+  "description": "A containerized to-do list CRUD API built with Node.js, Express, PostgreSQL, Docker, and Docker Compose.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahriarkabir280/A2_todo-postgres.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shahriarkabir280/A2_todo-postgres/issues"
+  },
+  "homepage": "https://github.com/shahriarkabir280/A2_todo-postgres#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
